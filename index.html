@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src = "images/logo1.png" class ="logo1">
+                <ul>
+                    <li>
+                        <a href="#header">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                     
+                     <li>
+                        <a href="#contact">Contact </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+            <h1> Hi, I am<br> <span>Prayansh Kumar</span></h1>
+               
+</div>     
+   </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <h1 class ="sub-title"> ABOUT ME</h1>
+                    <p> Hello,i am Prayansh kumar.I am currently studying in BTECH program of IIT GUWAHATI.</p>
+                    <p>My hobbies are playing basketball and playing music </p>
+                    <p>Currently , i am trying my best to learn some tech skills such as in web development , dsa and databases </p>
+                    <p>THANK YOU FOR VISITING THIS WEBSITE</p>
+                    <div class="tab-titles">
+                        <p class ="tab-links active-link" onclick ="opentab('skills')">Skills</p>
+                        <p class ="tab-links" onclick ="opentab('education')">Education</p>
+                    </div> 
+                    <div class="tab-contents active-tab" id ="skills" >
+                        <ul>
+                            <li><span>Web Development</span><br>Learning WEB DEVELOPMENT</li>
+                            <li><span>Data Structures and Algorithm</span><br> LEARNING DSA</li>
+                        </ul>
+                    </div>   
+                    <div class="tab-contents" id ="education">
+                        <ul>
+                            <li><span>2021</span><br>Graduated from ST.XAVIERS SCHOOL,DURAPUR</li>
+                            <li><span>2023</span><br> Graduated from DISHA DELPHI SCHOOL,KOTA</li>
+                            <li><span>2024</span><br> Currently studying in IIT GUWAHATI,CSE DEPARTMENT</li>
+                        </ul>
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class ="sub-title"> Contact me</h1>
+                    <p>k.prayansh@iitg.ac.in</p>
+                    <p>+91-9679328600</p>
+                    
+                </div>
+                <a href ="images/mycv.pdf" download class ="btn">Download CV</a>
+                <div class="contact-right">
+                    <form>
+                        <input type ="text" name ="Name" placeholder ="Your Name" required>
+                        <input type ="email"name = "email" placeholder = "Your email" required>
+                        <textarea name ="Message" rows = "6" placeholder = "Your message"></textarea>
+                        <button type ="submit" class ="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright @ Prayansh</p>
+        </div>
+    
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+
+    </script>
+</body>
+</html>
